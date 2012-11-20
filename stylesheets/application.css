@@ -107,7 +107,9 @@ h3, a.button {
 
 a {
   color: inherit;
-  text-decoration: underline; }
+  text-decoration: underline;
+  /* Buttons */
+  /* Anchors */ }
   a:hover {
     text-decoration: none; }
   a.button {
@@ -121,6 +123,13 @@ a {
       background: #5c5c5c; }
     a.button:active {
       background: #525252; }
+  a.anchor {
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden; }
 
 p {
   font-size: 1em;
