@@ -7,7 +7,7 @@
 */
 html, body, div, span, applet, object, iframe,
 h1,
-.large, h2, h3, a.button, h4, h5, h6, p, blockquote, pre,
+.large, h2, h3, a.button, .section.nav a, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, #slider li, sub, sup, tt, var,
@@ -82,13 +82,13 @@ body {
   font-weight: 400; }
 
 /* Typography */
-h1, .large, h2, h3, a.button {
+h1, .large, h2, h3, a.button, .section.nav a {
   font-family: "Open Sans", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.15em;
   line-height: 1em; }
-  h1.center, .center.large, h2.center, h3.center, a.center.button {
+  h1.center, .center.large, h2.center, h3.center, a.center.button, .section.nav a.center {
     text-align: center; }
 
 h1, .large {
@@ -100,7 +100,7 @@ h2 {
   text-align: center;
   padding: 0 0 40px 0; }
 
-h3, a.button {
+h3, a.button, .section.nav a {
   font-size: 1.3em;
   line-height: 2em;
   padding: 0 0 20px 0; }
@@ -112,16 +112,16 @@ a {
   /* Anchors */ }
   a:hover {
     text-decoration: none; }
-  a.button {
+  a.button, .section.nav a {
     display: inline-block;
     padding: 4px 12px;
     background: #666666;
     color: white;
     text-decoration: none;
     font-size: 1em; }
-    a.button:hover {
+    a.button:hover, .section.nav a:hover {
       background: #5c5c5c; }
-    a.button:active {
+    a.button:active, .section.nav a:active {
       background: #525252; }
   a.anchor {
     display: block;
@@ -132,7 +132,7 @@ a {
     visibility: hidden; }
 
 p {
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 2em;
   padding: 0 0 20px 0; }
 
@@ -150,9 +150,10 @@ em {
 /* Lists */
 ul {
   list-style: square;
-  list-style-position: outside;
+  list-style-position: inside;
   padding: 0 0 20px 0; }
   ul li {
+    font-size: 1.1em;
     line-height: 2em; }
 
 /* Lines */
@@ -168,7 +169,7 @@ hr {
   width: 100%;
   display: block;
   min-height: 100px;
-  padding: 40px;
+  padding: 40px 0;
   /* Logo Header */
   /* Image Headers */
   /* Footers */ }
@@ -178,6 +179,17 @@ hr {
       display: inline-block;
       text-align: center;
       width: 100%; }
+  .section.nav {
+    padding: 10px;
+    min-height: 0;
+    text-align: center; }
+    .section.nav a {
+      font-size: 0.8em;
+      background: none;
+      color: #666666;
+      margin: 0 40px; }
+      .section.nav a:hover {
+        background: #e6e6e6; }
   .section.header {
     background-size: cover;
     background-position: center center;
@@ -203,6 +215,8 @@ hr {
       text-align: center; }
       .section.header .hero h1, .section.header .hero .large {
         padding: 0 0 20px 0; }
+      .section.header .hero h3, .section.header .hero a.button, .section.header .hero .section.nav a, .section.nav .section.header .hero a {
+        padding: 40px 0 0 0; }
       .section.header .hero .button {
         background: white;
         color: #333333; }
@@ -246,6 +260,9 @@ hr {
     padding-top: 40px; }
 
 /* Miscellaneous */
+iframe + .box {
+  margin-top: 40px; }
+
 .box {
   border: 1px solid #333333;
   padding: 20px;
