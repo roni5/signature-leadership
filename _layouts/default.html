@@ -17,7 +17,6 @@
         $('#slider').anythingSlider({
           mode: "fade",
           autoPlay: true,
-          delay: 6000,
           autoPlayLocked: true,
           hashTags: false,
           buildArrows: false,
@@ -30,6 +29,34 @@
   </head>
 
   <body class="{{ page.keyword }}">
+
+    <div class="section logo">
+      <div class="wrap">
+        <a href="">
+          <img src="../images/logo_header(dark).png" alt="">
+        </a>
+      </div>
+    </div>
+
     {{ content }}
+
+    <div class="section footer">
+      <div class="wrap">
+        <div class="col-six offset-three">
+          <p>
+            <a href=""><img src="../images/social/twitter.png" alt=""></a>
+            <a href=""><img src="../images/social/facebook.png" alt=""></a>
+            <a href=""><img src="../images/social/googleplus.png" alt=""></a>
+          </p>
+
+          <p>
+            <a href=""><img src="../images/logo_footer(white).png" alt=""></a>
+          </p>
+
+          <p><em>Signature Leadership Courses are a presented by <a href="http://collegeplus.org">CollegePlus</a>, a customized accredited degree program designed around your specific needs, personality, and life purpose.<br/><a href="http://collegeplus.org/howitworks">Learn more</a> or <a href="http://collegeplus.org/whoweare/contactus">contact us</a>.</em></p>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

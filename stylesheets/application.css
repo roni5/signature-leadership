@@ -166,7 +166,7 @@ hr {
 /* Layout */
 .section {
   width: 100%;
-  display: inline-block;
+  display: block;
   min-height: 100px;
   padding: 40px;
   /* Logo Header */
