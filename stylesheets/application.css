@@ -205,18 +205,29 @@ hr {
     .section.header h1, .section.header .large, .section.header h2, .section.header p, .section.header li {
       text-shadow: 0 0 20px black; }
     .section.header.cabin {
-      background-image: url(../images/headers/cabin.png);
       background-position: center -400px; }
+      .section.header.cabin.bw {
+        background-image: url(../images/headers/cabin_b&w.png); }
+      .section.header.cabin.color {
+        background-image: url(../images/headers/cabin_color.png); }
       .section.header.cabin .hero {
         margin-top: 40px; }
     .section.header.lodge {
-      background-image: url(../images/headers/lodge.png);
       background-position: top center; }
-    .section.header.course {
-      background-image: url(../images/headers/course.png); }
+      .section.header.lodge.bw {
+        background-image: url(../images/headers/lodge_b&w.png); }
+      .section.header.lodge.color {
+        background-image: url(../images/headers/lodge_color.png); }
+    .section.header.course.bw {
+      background-image: url(../images/headers/course_b&w.png); }
+    .section.header.course.color {
+      background-image: url(../images/headers/course_color.png); }
     .section.header.mountains {
-      background-image: url(../images/headers/mountains.png);
       background-position: center -200px; }
+      .section.header.mountains.bw {
+        background-image: url(../images/headers/mountains_b&w.png); }
+      .section.header.mountains.color {
+        background-image: url(../images/headers/mountains_color.png); }
     .section.header .hero {
       text-align: center; }
       .section.header .hero h1, .section.header .hero .large {

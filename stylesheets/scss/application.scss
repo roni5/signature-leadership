@@ -196,8 +196,15 @@ hr {
     }
 
     &.cabin {
-      background-image: url(../images/headers/cabin.png);
       background-position: center -400px;
+
+      &.bw {
+        background-image: url(../images/headers/cabin_b&w.png);
+      }
+
+      &.color {
+        background-image: url(../images/headers/cabin_color.png);
+      }
 
       .hero {
         margin-top: 40px;
@@ -205,17 +212,38 @@ hr {
     }
 
     &.lodge {
-      background-image: url(../images/headers/lodge.png);
       background-position: top center;
+
+      &.bw {
+        background-image: url(../images/headers/lodge_b&w.png);
+      }
+
+      &.color {
+        background-image: url(../images/headers/lodge_color.png);
+      }
     }
 
     &.course {
-      background-image: url(../images/headers/course.png);
+
+      &.bw {
+        background-image: url(../images/headers/course_b&w.png);
+      }
+
+      &.color {
+        background-image: url(../images/headers/course_color.png);
+      }
     }
 
     &.mountains {
-      background-image: url(../images/headers/mountains.png);
       background-position: center -200px;
+
+      &.bw {
+        background-image: url(../images/headers/mountains_b&w.png);
+      }
+
+      &.color {
+        background-image: url(../images/headers/mountains_color.png);
+      }
     }
 
     .hero {
