@@ -33,10 +33,6 @@ h1, h2, h3 {
   font-weight: 700;
   letter-spacing: 0.15em;
   line-height: 1em;
-
-  &.center {
-    text-align: center;
-  }
 }
 
 h1 {
@@ -96,6 +92,18 @@ p {
   font-size: 1.1em;
   line-height: 2em;
   padding: 0 0 20px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+img {
+
+  &.round {
+    @include border-radius(50%);
+    position: relative;
+  }
 }
 
 strong {
