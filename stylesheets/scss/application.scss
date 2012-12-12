@@ -92,6 +92,14 @@ p {
   font-size: 1.1em;
   line-height: 2em;
   padding: 0 0 20px 0;
+
+  img {
+    max-width: 100%;
+  }
+
+  & + hr {
+    margin-top: 20px;
+  }
 }
 
 .center {
@@ -127,6 +135,7 @@ ul {
   list-style: square;
   list-style-position: inside;
   padding: 0 0 20px 0;
+  text-align: left;
 
   li {
     font-size: 1.1em;
@@ -253,10 +262,6 @@ hr {
         padding: 0 0 20px 0;
       }
 
-      h3 {
-        padding: 40px 0 0 0;
-      }
-
       .button {
         background: white;
         color: $darkgrey;
@@ -265,11 +270,15 @@ hr {
 
         &:active { background: darken(white, 8%); }
       }
+
+      ul {
+        text-align: center;
+      }
     }
 
     h2 {
       line-height: 2em;
-      padding: 0;
+      padding: 20px 0 0 0;
 
       &::after {
         content: "";
@@ -311,6 +320,10 @@ hr {
   & + .wrap {
     padding-top: 40px;
   }
+
+  & + p {
+    margin-top: 20px;
+  }
 }
 
 /* Miscellaneous */
@@ -329,6 +342,14 @@ iframe {
 
   &.video {
     height: 300px;
+  }
+
+  .wrap {
+    text-align: left;
+  }
+
+  & + .box {
+    margin-top: 40px;
   }
 }
 

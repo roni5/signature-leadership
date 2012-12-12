@@ -133,6 +133,10 @@ p {
   font-size: 1.1em;
   line-height: 2em;
   padding: 0 0 20px 0; }
+  p img {
+    max-width: 100%; }
+  p + hr {
+    margin-top: 20px; }
 
 .center {
   text-align: center; }
@@ -157,7 +161,8 @@ em {
 ul {
   list-style: square;
   list-style-position: inside;
-  padding: 0 0 20px 0; }
+  padding: 0 0 20px 0;
+  text-align: left; }
   ul li {
     font-size: 1.1em;
     line-height: 2em; }
@@ -232,8 +237,6 @@ hr {
       text-align: center; }
       .section.header .hero h1, .section.header .hero .large {
         padding: 0 0 20px 0; }
-      .section.header .hero h3, .section.header .hero a.button, .section.header .hero .section.nav a, .section.nav .section.header .hero a {
-        padding: 40px 0 0 0; }
       .section.header .hero .button {
         background: white;
         color: #333333; }
@@ -241,9 +244,11 @@ hr {
           background: whitesmoke; }
         .section.header .hero .button:active {
           background: #ebebeb; }
+      .section.header .hero ul {
+        text-align: center; }
     .section.header h2 {
       line-height: 2em;
-      padding: 0; }
+      padding: 20px 0 0 0; }
       .section.header h2::after {
         content: "";
         display: block;
@@ -275,6 +280,8 @@ hr {
     clear: both; }
   .wrap + .wrap {
     padding-top: 40px; }
+  .wrap + p {
+    margin-top: 20px; }
 
 /* Miscellaneous */
 iframe + .box {
@@ -286,6 +293,10 @@ iframe + .box {
   text-align: center; }
   .box.video {
     height: 300px; }
+  .box .wrap {
+    text-align: left; }
+  .box + .box {
+    margin-top: 40px; }
 
 #slider {
   margin: 0 auto;
