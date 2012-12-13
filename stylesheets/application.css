@@ -297,6 +297,8 @@ iframe + .box {
     text-align: left; }
   .box + .box {
     margin-top: 40px; }
+  .box .button:only-child {
+    margin-top: 20px; }
 
 #slider {
   margin: 0 auto;
