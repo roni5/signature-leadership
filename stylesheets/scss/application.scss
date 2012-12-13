@@ -60,22 +60,6 @@ a {
     text-decoration: none;
   }
 
-  /* Buttons */
-
-  &.button {
-    @extend h3;
-    display: inline-block;
-    padding: 4px 12px;
-    background: $medgrey;
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-
-    &:hover { background: darken($medgrey, 4%); }
-
-    &:active { background: darken($medgrey, 8%); }
-  }
-
   /* Anchors */
 
   &.anchor {
@@ -86,6 +70,22 @@ a {
     left: 0;
     visibility: hidden;
   }
+}
+
+/* Buttons */
+
+.button {
+  @extend h3;
+  display: inline-block;
+  padding: 4px 12px;
+  background: $medgrey;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+
+  &:hover { background: darken($medgrey, 4%); }
+
+  &:active { background: darken($medgrey, 8%); }
 }
 
 p {
@@ -179,7 +179,7 @@ hr {
     text-align: center;
 
     a {
-      @extend a.button;
+      @extend .button;
       font-size: 0.8em;
       background: none;
       color: $medgrey;
@@ -371,6 +371,58 @@ iframe {
     top: 0;
   }
 }
+
+.hidden {
+  @include appearance(none);
+}
+
+/* Forms */
+
+.field {
+  display: inline-block;
+  width: 100%;
+  clear: both;
+  padding: 0 0 20px 0;
+
+  label {
+    text-align: left;
+    width: 40%;
+    display: inline-block;
+    float: left;
+    line-height: 1em;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid transparent;
+  }
+
+  input {
+
+    &[type="text"], &[type="email"], &[type="password"] {
+      width: 60%;
+      float: right;
+      border: none;
+      border-bottom: 1px solid $darkgrey;
+      padding: 0 0 10px 0;
+      font-size: inherit;
+      font-family: Georgia, "Times New Roman", serif;
+      color: $darkgrey;
+      outline: none;
+      line-height: 1em;
+      margin: 0;
+    }
+  }
+}
+
+.actions {
+
+  input {
+
+    &[type="submit"] {
+      @extend .button;
+      margin: 0!important;
+    }
+  }
+}
+
 
 /* Columns */
 
