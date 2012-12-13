@@ -50,6 +50,10 @@ h3 {
   font-size: 1.3em;
   line-height: 2em;
   padding: 0 0 20px 0;
+
+  &.video {
+    padding: 100px 0 20px 0;
+  }
 }
 
 a {
@@ -297,7 +301,7 @@ hr {
   /* Footers */
 
   &.footer {
-    background: $medgrey;
+    background: $darkgrey;
     color: white;
     text-align: center;
 
@@ -390,7 +394,7 @@ iframe {
     display: inline-block;
     float: left;
     line-height: 1em;
-    padding: 0 0 10px 0;
+    padding: 0 10px 10px 0;
     border-bottom: 1px solid transparent;
   }
 
