@@ -7,7 +7,7 @@
 */
 html, body, div, span, applet, object, iframe,
 h1,
-.large, h2, h3, a.button, h4, h5, h6, p, blockquote, pre,
+.large, h2, h3, .button, .section.nav a, .actions input[type="submit"], h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, #slider li, sub, sup, tt, var,
@@ -82,14 +82,12 @@ body {
   font-weight: 400; }
 
 /* Typography */
-h1, .large, h2, h3, a.button {
+h1, .large, h2, h3, .button, .section.nav a, .actions input[type="submit"] {
   font-family: "Open Sans", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.15em;
   line-height: 1em; }
-  h1.center, .center.large, h2.center, h3.center, a.center.button {
-    text-align: center; }
 
 h1, .large {
   font-size: 3em;
@@ -100,29 +98,19 @@ h2 {
   text-align: center;
   padding: 0 0 40px 0; }
 
-h3, a.button {
+h3, .button, .section.nav a, .actions input[type="submit"] {
   font-size: 1.3em;
   line-height: 2em;
   padding: 0 0 20px 0; }
+  h3.video, .video.button, .section.nav a.video, .actions input.video[type="submit"] {
+    padding: 100px 0 20px 0; }
 
 a {
   color: inherit;
   text-decoration: underline;
-  /* Buttons */
   /* Anchors */ }
   a:hover {
     text-decoration: none; }
-  a.button {
-    display: inline-block;
-    padding: 4px 12px;
-    background: #666666;
-    color: white;
-    text-decoration: none;
-    font-size: 1em; }
-    a.button:hover {
-      background: #5c5c5c; }
-    a.button:active {
-      background: #525252; }
   a.anchor {
     display: block;
     height: 20px;
@@ -131,10 +119,35 @@ a {
     left: 0;
     visibility: hidden; }
 
+/* Buttons */
+.button, .section.nav a, .actions input[type="submit"] {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #666666;
+  color: white;
+  text-decoration: none;
+  font-size: 1em; }
+  .button:hover, .section.nav a:hover, .actions input[type="submit"]:hover {
+    background: #5c5c5c; }
+  .button:active, .section.nav a:active, .actions input[type="submit"]:active {
+    background: #525252; }
+
 p {
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 2em;
   padding: 0 0 20px 0; }
+  p img {
+    max-width: 100%; }
+  p + hr {
+    margin-top: 20px; }
+
+.center {
+  text-align: center; }
+
+img.round {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative; }
 
 strong, #slider li {
   font-weight: bold; }
@@ -150,9 +163,11 @@ em {
 /* Lists */
 ul {
   list-style: square;
-  list-style-position: outside;
-  padding: 0 0 20px 0; }
+  list-style-position: inside;
+  padding: 0 0 20px 0;
+  text-align: left; }
   ul li {
+    font-size: 1.1em;
     line-height: 2em; }
 
 /* Lines */
@@ -166,9 +181,9 @@ hr {
 /* Layout */
 .section {
   width: 100%;
-  display: inline-block;
+  display: block;
   min-height: 100px;
-  padding: 40px;
+  padding: 40px 0;
   /* Logo Header */
   /* Image Headers */
   /* Footers */ }
@@ -178,6 +193,17 @@ hr {
       display: inline-block;
       text-align: center;
       width: 100%; }
+  .section.nav {
+    padding: 10px;
+    min-height: 0;
+    text-align: center; }
+    .section.nav a {
+      font-size: 0.8em;
+      background: none;
+      color: #666666;
+      margin: 0 40px; }
+      .section.nav a:hover {
+        background: #e6e6e6; }
   .section.header {
     background-size: cover;
     background-position: center center;
@@ -187,32 +213,45 @@ hr {
     .section.header h1, .section.header .large, .section.header h2, .section.header p, .section.header li {
       text-shadow: 0 0 20px black; }
     .section.header.cabin {
-      background-image: url(../images/headers/cabin.png);
       background-position: center -400px; }
+      .section.header.cabin.bw {
+        background-image: url(../images/headers/cabin_b&w.png); }
+      .section.header.cabin.color {
+        background-image: url(../images/headers/cabin_color.png); }
       .section.header.cabin .hero {
         margin-top: 40px; }
     .section.header.lodge {
-      background-image: url(../images/headers/lodge.png);
       background-position: top center; }
-    .section.header.course {
-      background-image: url(../images/headers/course.png); }
+      .section.header.lodge.bw {
+        background-image: url(../images/headers/lodge_b&w.png); }
+      .section.header.lodge.color {
+        background-image: url(../images/headers/lodge_color.png); }
+    .section.header.course.bw {
+      background-image: url(../images/headers/course_b&w.png); }
+    .section.header.course.color {
+      background-image: url(../images/headers/course_color.png); }
     .section.header.mountains {
-      background-image: url(../images/headers/mountains.png);
       background-position: center -200px; }
+      .section.header.mountains.bw {
+        background-image: url(../images/headers/mountains_b&w.png); }
+      .section.header.mountains.color {
+        background-image: url(../images/headers/mountains_color.png); }
     .section.header .hero {
       text-align: center; }
       .section.header .hero h1, .section.header .hero .large {
         padding: 0 0 20px 0; }
-      .section.header .hero .button {
+      .section.header .hero .button, .section.header .hero .section.nav a, .section.nav .section.header .hero a, .section.header .hero .actions input[type="submit"], .actions .section.header .hero input[type="submit"] {
         background: white;
         color: #333333; }
-        .section.header .hero .button:hover {
+        .section.header .hero .button:hover, .section.header .hero .section.nav a:hover, .section.nav .section.header .hero a:hover, .section.header .hero .actions input[type="submit"]:hover, .actions .section.header .hero input[type="submit"]:hover {
           background: whitesmoke; }
-        .section.header .hero .button:active {
+        .section.header .hero .button:active, .section.header .hero .section.nav a:active, .section.nav .section.header .hero a:active, .section.header .hero .actions input[type="submit"]:active, .actions .section.header .hero input[type="submit"]:active {
           background: #ebebeb; }
+      .section.header .hero ul {
+        text-align: center; }
     .section.header h2 {
       line-height: 2em;
-      padding: 0; }
+      padding: 20px 0 0 0; }
       .section.header h2::after {
         content: "";
         display: block;
@@ -224,7 +263,7 @@ hr {
         left: 50%;
         margin-left: -40px; }
   .section.footer {
-    background: #666666;
+    background: #333333;
     color: white;
     text-align: center; }
     .section.footer a img {
@@ -244,14 +283,25 @@ hr {
     clear: both; }
   .wrap + .wrap {
     padding-top: 40px; }
+  .wrap + p {
+    margin-top: 20px; }
 
 /* Miscellaneous */
+iframe + .box {
+  margin-top: 40px; }
+
 .box {
   border: 1px solid #333333;
   padding: 20px;
   text-align: center; }
   .box.video {
     height: 300px; }
+  .box .wrap {
+    text-align: left; }
+  .box + .box {
+    margin-top: 40px; }
+  .box .button:only-child, .box .section.nav a:only-child, .section.nav .box a:only-child, .box .actions input[type="submit"]:only-child, .actions .box input[type="submit"]:only-child {
+    margin-top: 20px; }
 
 #slider {
   margin: 0 auto;
@@ -260,6 +310,43 @@ hr {
     position: absolute;
     line-height: 2em;
     top: 0; }
+
+.hidden {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+/* Forms */
+.field {
+  display: inline-block;
+  width: 100%;
+  clear: both;
+  padding: 0 0 20px 0; }
+  .field label {
+    text-align: left;
+    width: 40%;
+    display: inline-block;
+    float: left;
+    line-height: 1em;
+    padding: 0 10px 10px 0;
+    border-bottom: 1px solid transparent; }
+  .field input[type="text"], .field input[type="email"], .field input[type="password"] {
+    width: 60%;
+    float: right;
+    border: none;
+    border-bottom: 1px solid #333333;
+    padding: 0 0 10px 0;
+    font-size: inherit;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #333333;
+    outline: none;
+    line-height: 1em;
+    margin: 0; }
+
+.actions input[type="submit"] {
+  margin: 0!important; }
 
 /* Columns */
 .col-one {
