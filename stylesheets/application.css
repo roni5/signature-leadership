@@ -80,6 +80,16 @@ body {
   color: #333333;
   font-size: 14px;
   font-weight: 400; }
+  body.learnmore a#learnmore {
+    background: #e6e6e6; }
+  body.stories a#stories {
+    background: #e6e6e6; }
+  body.coursedetails a#coursedetails {
+    background: #e6e6e6; }
+  body.drjeffmyers a#drjeffmyers {
+    background: #e6e6e6; }
+  body.faqs a#faqs {
+    background: #e6e6e6; }
 
 /* Typography */
 h1, .large, h2, h3, .button, .section.nav a, .actions input[type="submit"] {
@@ -119,19 +129,6 @@ a {
     left: 0;
     visibility: hidden; }
 
-/* Buttons */
-.button, .section.nav a, .actions input[type="submit"] {
-  display: inline-block;
-  padding: 4px 12px;
-  background: #666666;
-  color: white;
-  text-decoration: none;
-  font-size: 1em; }
-  .button:hover, .section.nav a:hover, .actions input[type="submit"]:hover {
-    background: #5c5c5c; }
-  .button:active, .section.nav a:active, .actions input[type="submit"]:active {
-    background: #525252; }
-
 p {
   font-size: 1.1em;
   line-height: 2em;
@@ -143,6 +140,23 @@ p {
 
 .center {
   text-align: center; }
+
+.left {
+  text-align: left; }
+
+/* Buttons */
+.button, .section.nav a, .actions input[type="submit"] {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #666666;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em; }
+  .button:hover, .section.nav a:hover, .actions input[type="submit"]:hover {
+    background: #5c5c5c; }
+  .button:active, .section.nav a:active, .actions input[type="submit"]:active {
+    background: #525252; }
 
 img.round {
   -webkit-border-radius: 50%;
@@ -159,6 +173,9 @@ em {
   display: inline-block;
   line-height: 1em;
   padding: 0 0 20px 0; }
+
+.symbol {
+  font-family: Arial; }
 
 /* Lists */
 ul {
@@ -198,12 +215,18 @@ hr {
     min-height: 0;
     text-align: center; }
     .section.nav a {
-      font-size: 0.8em;
+      font-size: 0.95em;
       background: none;
       color: #666666;
-      margin: 0 40px; }
+      margin: 0 20px; }
+      .section.nav a:first-of-type {
+        margin-left: 0; }
+      .section.nav a:last-of-type {
+        margin-right: 0; }
       .section.nav a:hover {
         background: #e6e6e6; }
+      .section.nav a:active {
+        background: #dbdbdb; }
   .section.header {
     background-size: cover;
     background-position: center center;
@@ -212,14 +235,23 @@ hr {
     padding: 80px 40px; }
     .section.header h1, .section.header .large, .section.header h2, .section.header p, .section.header li {
       text-shadow: 0 0 20px black; }
+    .section.header.video {
+      padding: 40px;
+      height: auto; }
+      .section.header.video * {
+        z-index: 1; }
+      .section.header.video h1, .section.header.video .large {
+        margin-top: 100px; }
+      .section.header.video #slider {
+        margin-top: 20px; }
+      .section.header.video iframe {
+        border: 1px solid white; }
     .section.header.cabin {
       background-position: center -400px; }
       .section.header.cabin.bw {
         background-image: url(../images/headers/cabin_b&w.png); }
       .section.header.cabin.color {
         background-image: url(../images/headers/cabin_color.png); }
-      .section.header.cabin .hero {
-        margin-top: 40px; }
     .section.header.lodge {
       background-position: top center; }
       .section.header.lodge.bw {
@@ -231,7 +263,7 @@ hr {
     .section.header.course.color {
       background-image: url(../images/headers/course_color.png); }
     .section.header.mountains {
-      background-position: center -200px; }
+      background-position: center -100px; }
       .section.header.mountains.bw {
         background-image: url(../images/headers/mountains_b&w.png); }
       .section.header.mountains.color {
@@ -261,15 +293,30 @@ hr {
         position: absolute;
         bottom: -4px;
         left: 50%;
-        margin-left: -40px; }
+        margin-left: -40px;
+        box-shadow: 0 0 20px black; }
   .section.footer {
-    background: #333333;
+    background: #666666;
     color: white;
     text-align: center; }
     .section.footer a img {
       padding: 0 10px; }
+    .section.footer a.logo {
+      margin-top: 40px; }
     .section.footer p {
       font-size: 0.8em; }
+    .section.footer .box {
+      border: 1px solid white; }
+    .section.footer input[type="text"], .section.footer input[type="email"], .section.footer input[type="password"] {
+      border-bottom: 1px solid white;
+      color: white; }
+    .section.footer input[type="submit"] {
+      background: white;
+      color: #666666; }
+      .section.footer input[type="submit"]:hover {
+        background: whitesmoke; }
+      .section.footer input[type="submit"]:active {
+        background: #ebebeb; }
 
 .wrap {
   zoom: 1;
@@ -294,18 +341,25 @@ iframe + .box {
   border: 1px solid #333333;
   padding: 20px;
   text-align: center; }
+  .box.col-three .button, .box.col-three .section.nav a, .section.nav .box.col-three a, .box.col-three .actions input[type="submit"], .actions .box.col-three input[type="submit"] {
+    padding: 4px 8px; }
+  .box.col-six .button, .box.col-six .section.nav a, .section.nav .box.col-six a, .box.col-six .actions input[type="submit"], .actions .box.col-six input[type="submit"] {
+    width: auto; }
   .box.video {
     height: 300px; }
   .box .wrap {
     text-align: left; }
   .box + .box {
     margin-top: 40px; }
+  .box + h3, .box + .button, .section.nav .box + a, .actions .box + input[type="submit"] {
+    margin-top: 40px; }
   .box .button:only-child, .box .section.nav a:only-child, .section.nav .box a:only-child, .box .actions input[type="submit"]:only-child, .actions .box input[type="submit"]:only-child {
     margin-top: 20px; }
 
 #slider {
   margin: 0 auto;
-  list-style: none; }
+  list-style: none;
+  text-align: center; }
   #slider li {
     position: absolute;
     line-height: 2em;
@@ -335,6 +389,7 @@ iframe + .box {
   .field input[type="text"], .field input[type="email"], .field input[type="password"] {
     width: 60%;
     float: right;
+    background: none;
     border: none;
     border-bottom: 1px solid #333333;
     padding: 0 0 10px 0;
@@ -344,9 +399,13 @@ iframe + .box {
     outline: none;
     line-height: 1em;
     margin: 0; }
+    .field input[type="text"]:focus, .field input[type="email"]:focus, .field input[type="password"]:focus {
+      background: none; }
 
-.actions input[type="submit"] {
-  margin: 0!important; }
+.actions {
+  text-align: right; }
+  .actions input[type="submit"] {
+    margin: 0!important; }
 
 /* Columns */
 .col-one {
